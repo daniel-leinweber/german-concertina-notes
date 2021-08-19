@@ -1,5 +1,5 @@
 # German Concertina Notes
-This project is to help learning the German Concertina (C/G), inspired by the windows application of (konzertinanetz.de)[https://www.konzertinanetz.de].
+This project is to help learning the German Concertina (C/G), inspired by the windows application of [konzertinanetz.de](https://www.konzertinanetz.de).
 
 ## Motivation
 Since I play the German Concertina myself I discovered the above described tool. The tool was developed for Windows and is not executable on my Mac. So I decided to rebuild it with simple web technologies.
