@@ -16,5 +16,8 @@ To choose a F# from the keyboard you can enter the #. To remove all selected not
 
 **Please note:** In german music theory the notes are A **H** C D E F G. So you might find explanations for the german concertina using an H instead of B.
 
-## Planned features
-I will add the chord builder from the Windows tool, so that it is possible to easily find the positions to build a chord (Major, Minor, Deminished) by choosing the base note.
+### Building chords
+In order to find the positions for possible chords, you can drag the root to the position of the desired root note. To form the triad you will have to play the root note, the third and fifth note.
+You may discover that it is not always possible to form the triad.
+
+**Note:** m3 = Minor 3rd, M3 = Major 3rd

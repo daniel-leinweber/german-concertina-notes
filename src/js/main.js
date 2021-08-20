@@ -70,18 +70,51 @@ function toggleToneButtons(key) {
 
 }
 
-function allowDrop(e) {
-    e.preventDefault();
-}
+function dragElement(element) {
+    
+    let newPosition = 0, lastPosition = 0;
+    document.getElementById("root").onmousedown = dragMouseDown;
 
-function drag(e) {    
+    function dragMouseDown(e) {
+        
+        e = e || window.event;
+        e.preventDefault();
 
-}
+        // get the mouse cursor position at startup:
+        lastPosition = e.clientX;
+        
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
 
-function drop(e) {
-    e.preventDefault();
+    }
+
+    function elementDrag(e) {
+
+        e = e || window.event;
+        e.preventDefault();
+
+        // calculate the new position:
+        newPosition = element.offsetLeft - (lastPosition - e.clientX);
+        lastPosition = e.clientX;
+
+        // set the element's new position:
+        element.style.left = newPosition + "px";
+
+    }
+
+    function closeDragElement() {
+
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+
+    }
+
 }
 
 const tones = Array.from(document.querySelectorAll('.tone'));
 tones.forEach(tone => tone.addEventListener('click', toneButtonClicked));
 window.addEventListener('keydown', keyPressed);
+
+// Make the chord container draggable:
+dragElement(document.getElementById("chord"));

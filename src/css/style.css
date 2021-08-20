@@ -10,13 +10,18 @@
     min-width: 850px;
 }
 
+.chord-container {
+    position: relative;
+    margin: auto;
+    max-width: 1263px;
+}
+
 .tone-container {
     margin-top: 2em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-width: 850px;
 }
 
 .tone-container span {
@@ -27,19 +32,29 @@
     cursor: pointer;
 }
 
-.chord-container {
-    margin-top: 0.5em;
+#chord {
+    position: absolute;
     display: flex;
-    flex-direction: row;
+    left: 200px;
+    z-index: 9;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
 }
 
-.chord-container span {
-    text-align: center;
+#chord div {
     display: inline-block;
+    text-align: center;
     width: 53px;
     border: 1px solid black;
-    cursor: pointer;
     font-size: small;
+}
+
+#root {
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
 }
 
 .hexagon {
